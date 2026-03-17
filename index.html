@@ -1,0 +1,303 @@
+<!DOCTYPE html><!--inicia codigo html -->
+<html lang="es-MX"><!--se invoca el idioma de la region-->
+<head><!--inicia la cabecera-->
+    <meta charset="UTF-8" />
+<meta name ="viewport" content = "width=device-width,initial-scale=1.0"/><!--se establece el formato para mostrar caracteres como ñ o acentos-->
+<title>Instituto de Educación Secundaria Padres de la Patria</title><!--se establece el titulo de la pagina-->
+<link rel = "stylesheet" href = "css/bootstrap.min.css"><!-- referencia de la hoja de estilo-->
+</head><!--termina cabecera-->
+
+<body><!--inicia cuerpo de la pagina-->
+<div style="background-color: #d1e0fc; "><!--se establece el color del cuerpo de la pagina-->
+  <!--se implementa la barra de navegacion y los stributos como color o que este fijo al hacer scroll-->
+<nav class ="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #e3f2fd;">
+<div class ="container-fluid">
+<a class ="navbar-brand" href="#">Principal</a><!--esta clase permite establecer un logo o nombre de marca-->
+<!--se establece los botones de la barra de navegacion asi como sus atributos-->
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--se estable las propiedades del menu de hamburguesa-->
+<div class="collapse navbar-collapse" id="navbarNav">   
+<ul class="navbar-nav">
+<!--aqui se establece el nombre de las opciones de la barra a modo de referencia-->
+<li class ="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+<li class ="nav-item"><a class="nav-link" href="registroES.html">Registrarse</a></li>
+<li class ="nav-item"><a class="nav-link" href="iniciarsesion.html">Iniciar sesión</a></li>
+</ul> </div> </div></nav><!--termina contenedores de la barra de navegacion-->
+<!--se invoca el archivo js de bootstrap-->
+<script src="js/bootstrap.min.js"></script>
+<!--se crea el contenedor para separar el titulo del menu-->
+  <div class="container mt-5">
+    <div class="row text-center ">
+    <h3>Instituto de Educación Secundaria Padres de la Patria</h3><!--se muestra el titulo de la imagen --></div></div>
+    <!--se implementa el contenedor que mantiene la estructura del carrusel-->
+    <div class="container mt-5">
+      <!--alineacion del carrusel-->
+    <div class="row justify-content-center">
+      <!--se implementa los atributos cuando la pagina se vea completa, a la mitad y cuando este delgada-->
+    <div class="col-12 col-md-8 col-lg-6">
+      <!--se establece los atributos del carrusel asi como sus controles-->
+      <div id="carruselescolar" class="carousel slide carousel-dark carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-indicators"><!--se establece los botones de indicadores que empiza en posicion 0-->
+          <button type="button" data-bs-target="#carruselescolar" data-bs-slide-to="0" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#carruselescolar" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carruselescolar" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carruselescolar" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#carruselescolar" data-bs-slide-to="4"></button>
+        </div>
+        <!--se establece el contenido interno del carrusel-->
+        <div class="carousel-inner">
+          <!--propiedades de la imagen del carrusel cuando este activo-->
+    <div class="carousel-item active" >
+      <img src="docente.jpg" class="d-block w-100 img-fluid" style="height: 480px; object-fit: cover;"  alt="Docente en linea">
+    <!--se implementa un boton cuando la imagen del carrusel este activa que permitira abrir el modal-->
+      <div class="carousel-caption ">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modaldocente">
+        Abrir Modal Informacion Docente
+      </button></div>
+    </div>
+    <!--se establece el contenido interno del carrusel-->
+    <div class="carousel-item">
+      <img src="aprender.jpg" class="d-block w-100 img-fluid" style="height: 480px; object-fit:cover;" alt="Aprendiendo en el aula">
+    <!--se implementa un boton cuando la imagen del carrusel este activa que permitira abrir el modal-->
+      <div class="carousel-caption ">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalaprender">
+        Abrir Modal Aprendiendo
+      </button></div>
+    </div>
+    <!--se establece el contenido interno del carrusel-->
+    <div class="carousel-item">
+      <img src="practicas.jpg" class="d-block w-100 img-fluid" style="height: 480px; object-fit: cover;" alt="Evidencia de Aprendizaje">
+    <!--se implementa un boton cuando la imagen del carrusel este activa que permitira abrir el modal-->
+      <div class="carousel-caption">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalpracticas">
+        Abrir Modal Practicas
+      </button></div>
+    </div>
+    <!--se establece el contenido interno del carrusel-->
+    <div class="carousel-item">
+      <img src="sesion.png" class="d-block w-100 img-fluid" style="height: 480px; object-fit: cover;" alt="Video Conferencia">
+    <!--se implementa un boton cuando la imagen del carrusel este activa que permitira abrir el modal-->
+      <div class="carousel-caption ">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalsesion">
+        Abrir Modal Sesion Videoconferencia
+      </button></div>
+    </div>
+     <!--se establece el contenido interno del carrusel-->
+    <div class="carousel-item">
+      <img src="colaborativas.png" class="d-block w-100 img-fluid" style="height: 480px; object-fit: cover;" alt="Actividad colaborativa">
+    <!--se implementa un boton cuando la imagen del carrusel este activa que permitira abrir el modal-->
+      <div class="carousel-caption ">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalcolaborativas">
+        Abrir Modal Colaborativa
+      </button></div>
+    </div>
+  </div>
+  <!--se implementan los botones del control del carrusel con sus atributos y referencias-->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carruselescolar" data-bs-slide="prev">
+    <!--se implementa estilizado en los botones del control-->
+    <span class="carousel-control-prev-icon"></span>
+    </button>
+    <!--se implementan los botones del control del carrusel con sus atributos y referencias-->
+  <button class="carousel-control-next" type="button" data-bs-target="#carruselescolar" data-bs-slide="next">
+    <!--se implementa estilizado en los botones del control-->
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div></div></div></div>  
+<!--se implementa el modal con sus atributos, id, cabecera y titulo-->
+<div class="modal fade" id="modalaprender" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalaprender">Aprender</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!--se implementa la imagen y la pequeña reseña del contexto de la imagen-->
+        <p>Contenido del Modal Aprender.</p>
+        <img src="aprender.jpg" class="d-block w-100 img-fluid" style="height: 480px; object-fit:cover;">
+        <p>En esta pagina modal mencionaremos como los alumnos refuerzan su Aprendizaje</p>
+        <p>Harán sus actividades individuales, colaborativas y demostrarán lo aprendido en la evidencia de aprendizaje</p>
+        <p>Despues de que los dicentes brinden la retroalimentacion de las actividades correspondientes, los alumnos tendran que atender y realizar las correcciones pertinentes.</p>
+      </div>
+      <!--se establece el footer y el boton para cerrar el modal-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--se implementa el modal con sus atributos, id, cabecera y titulo-->
+<div class="modal fade" id="modaldocente" tabindex="-1" aria-labelledby="modaldocente" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modaldocente">Docente</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!--se implementa la imagen y la pequeña reseña del contexto de la imagen-->
+        <p>Contenido del Modal Docente.</p>
+        <img src="docente.jpg" class="d-block w-100 img-fluid" style="height: 480px; object-fit:cover;">
+        <p>En esta pagina modal podemos hablar sobre los docentes que ayudan al alumnado en su aprendizaje</p>
+        <p>Harán sus evaluaciones en la plataforma, la publicaran y brindaran retroalimentacion a los alumnos</p>
+        <p>El docente tendrá la disponibilidad para atender cualquier duda que presente los alumnos</p>
+      </div>
+      <!--se establece el footer y el boton para cerrar el modal-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!--se implementa el modal con sus atributos, id, cabecera y titulo-->
+<div class="modal fade" id="modalpracticas" tabindex="-1" aria-labelledby="modalpracticas" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalpracticas">Practicas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!--se implementa la imagen y la pequeña reseña del contexto de la imagen-->
+        <p>Contenido del Modal Practicas.</p>
+        <img src="practicas.jpg" class="d-block w-100 img-fluid" style="height: 480px; object-fit:cover;">
+        <p>Las practicas permitirán a los alumnos adquirir el conocimiento necesario para poder acreditar las asignaturas correspondientes</p>
+        <p>Los alumnos deberan utilizar las herramientas que proporciona el docente mediante la plataforma paraque se puedan descargar</p>
+        <p></p>
+      </div>
+      <!--se establece el footer y el boton para cerrar el modal-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!--se implementa el modal con sus atributos, id, cabecera y titulo-->
+<div class="modal fade" id="modalsesion" tabindex="-1" aria-labelledby="modalsesion" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalpracticas">Sesion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!--se implementa la imagen y la pequeña reseña del contexto de la imagen-->
+        <p>Contenido del Modal Sesion.</p>
+        <img src="sesion.png" class="d-block w-100 img-fluid" style="height: 480px; object-fit:cover;">
+        <p>Las sesiones permitirán a los alumnos estar informados en todo momento, ya que los profesores brindaran informacion relevante</p>
+        <p>El docente explicara a detalle en las sesiones de video conferencio todas las actividades que realizarán los alumnos </p> 
+        <p>Los alumnos podran exponer todas las dudas que surgan dada la revision de la planificacion de las actividades</p>
+      </div>
+      <!--se establece el footer y el boton para cerrar el modal-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--se implementa el modal con sus atributos, id, cabecera y titulo-->
+<div class="modal fade" id="modalcolaborativas" tabindex="-1" aria-labelledby="modalcolaborativas" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalcolaborativas">Colaborativa</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!--se implementa la imagen y la pequeña reseña del contexto de la imagen-->
+        <p>Contenido del Modal Colaborativa.</p>
+        <img src="colaborativas.png" class="d-block w-100 img-fluid" style="height: 480px; object-fit:cover;">
+        <p>Los alumnos deberán realizar actividades colaborativas</p>
+        <p>En estas actividades los alumnos podran brindar y recibir retroalimentacion de otros compañeros a fin de reforzar su aprendizaje </p> 
+        <p>Los alumnos deberan brindar la retroalimentacion en un segundo intento paraque sea considerado</p>
+      </div>
+      <!--se establece el footer y el boton para cerrar el modal-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--comienza tarjetas promocionales se implementa un contenedor-->
+<div class="container my-5">
+  <!--se implementa atributos y espaciado-->
+  <div class="row text-center mb-4">
+    <!--cabeceras y titulos de la tarjeta-->
+    <h2>Servicios escolares de la institucion Padres de la Patria</h2>
+    <p class="text-muted">A continuacion te mostramos los servicios que la institucion ofrece para fomentar el desarrollo académico.</p>
+  </div>
+<!--se define las filas y el espaciado interno-->
+  <div class="row g-4">
+<!--se implementa los atributos cuando la pagina se vea completa, a la mitad y cuando este delgada-->
+    <div class="col-12 col-md-6 col-lg-4">
+      <!--atributos de la tarjeta que señalan la altura-->
+      <div class="card h-100 shadow-sm">
+        <!--se hace referencia a la imagen de la tarjeta y atributos para que se adapte al espacio de la misma-->
+        <img src="biblioteca.png" class="d-block img-fluid" style="height:200px; object-fit:cover;" alt="Biblioteca">
+        <!--se establece la forma en que se define las tarjetas en este caso en columnas-->
+        <div class="card-body d-flex flex-column">
+          <!--titulo de la tarjeta asi como el texto y el espaciado automatico-->
+          <h5 class="card-title">Biblioteca</h5>
+          <p class="card-text">La bilioteca academica permite tener acceso a los titulos mas solicitados por la comunidad, desde libros fisicos y digitales, ademas cuenta con espacios para que puedas realizar tus actividades. </p>
+          <div class="mt-auto">
+            <!--se implementa el boton de accion-->
+            <a href="#" class="btn btn-primary w-100">Accede a la biblioteca</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <!--se implementa los atributos cuando la pagina se vea completa, a la mitad y cuando este delgada-->
+    <div class="col-12 col-md-6 col-lg-4">
+      <!--atributos de la tarjeta que señalan la altura-->
+      <div class="card h-100 shadow-sm">
+        <!--se hace referencia a la imagen de la tarjeta y atributos para que se adapte al espacio de la misma-->
+        <img src="orientacion.png" class="d-block img-fluid" style="height:200px; object-fit:cover;" alt="Orientacion Academica">
+         <!--se establece la forma en que se define las tarjetas en este caso en columnas-->
+        <div class="card-body d-flex flex-column">
+           <!--titulo de la tarjeta asi como el texto y el espaciado automatico-->
+          <h5 class="card-title">Orientación Academica</h5>
+          <p class="card-text">La institucion cuenta con personal calificado para brincar asesoria en tus asignaturas o en vocacion profesional.
+            Puedes acercarte a ellos solicitando una cita.</p>
+          <div class="mt-auto">
+            <!--se implementa el boton de accion-->
+            <a href="#" class="btn btn-primary w-100">Solicitar asesoria</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!--se implementa los atributos cuando la pagina se vea completa, a la mitad y cuando este delgada-->
+    <div class="col-12 col-md-6 col-lg-4">
+      <!--atributos de la tarjeta que señalan la altura-->
+      <div class="card h-100 shadow-sm">
+        <!--se hace referencia a la imagen de la tarjeta y atributos para que se adapte al espacio de la misma-->
+        <img src="serviciomedico.png" class="d-block img-fluid" style="height:200px; object-fit:cover;" alt="Servicio Medico">
+        <!--se establece la forma en que se define las tarjetas en este caso en columnas-->
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Servicio Medico</h5>
+          <p class="card-text">Si en algun momento en tu estancia por el campus requieres de atencion medica, no dudes en acudir al servicio medico.
+            personal medico te realizara una evaluacion de primer contacto y brindara tratamiento inicial por un dia,
+            en caso de requerir traslado a un hospital por urgencia se solicitara una ambulancia</p>
+          <div class="mt-auto">
+            <!--se implementa el boton de accion-->
+            <a href="#" class="btn btn-primary w-100">Agendar cita</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+</body><!--termina el cuerpo-->
+</html><!--fin de html-->

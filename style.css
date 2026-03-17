@@ -1,0 +1,156 @@
+body /*este estilo se implementara en el cuerpo de la pagina*/
+ {
+  
+     justify-content: center; /*espacio del body */
+      background-color: #d5e0ed;/* se coloca el color de fondo en formato hexadecimal */
+      margin: 0;/*se establece el margen del cuerpo de la pagina*/
+ }
+#navbar /*se establece el estilo de la barra de navegacion*/
+{
+  background-color: #99bbea;/*se establece el color de fondo de la barra*/
+  border-radius: 20px; /* Añade curvatura a los bordes */
+  padding: 5px;/*se establece el espaciado*/
+  justify-content: space-around;/*se establece el justificado que permite mantener alineados los elementos de la barra de navegacion*/
+  display: inline-flex; /* Ajusta el ancho al contenido */
+  align-items: center;/*alineacion centrado*/
+  font-size: 16px;  /* se establece el tamaño de fuente */
+  font-family: Arial; /* se establece el tipo de fuente */
+}
+
+#navbar ul/*se establece el estilo de la lista no ordenada*/
+{
+   list-style-type: none;/*se elimina la marca del estilo de lista*/
+  
+}
+#navbar li/*se configuran los elementos de la lista*/
+{
+   display: inline;/*se implementa que cada elemento de la lista se muestre en lista*/
+   margin: 0 40px 0 0;/*se implementa el margen entre los elementos*/
+   
+}
+
+#navbar li a /*se establece el estilo de los enlaces de la barra de navegacion*/
+{
+  color: #000000;/*se establece el color del texto*/
+  text-decoration: none;/*se elimina el subrayado de los links*/
+  padding: 10px 15px;/*se establece el espaciado*/
+  border-radius: 20px; /* Bordes curvos en los enlaces */
+  transition: background 0.3s ease;/*establece el tiempo de transicion entre el movimiento del mouse*/
+}
+
+#navbar li a:hover/*se configura el paso del mouse al link*/
+{
+   background-color: #15429eb3;
+   color: #000000;
+}
+
+#flex-container/*contenedor principal*/
+   {
+    display: flex;  /* activar flexbox */
+    justify-content: space-around; /*espacio entre las cajas */
+    padding-bottom: 0px;/*espaciado inferior*/
+    padding: 15px; /* espaciado interno */
+    position: fixed;/* fija el contenedor en la parte superior */
+    top: 0;/*señala el margen arriba*/
+    left: 0;/*señala el margen izq*/
+    right: 0;/*señala el margen der*/
+    z-index: 1000; /*permite que este sobre otros elementos */
+  }
+
+
+
+.tarjetas /*clase que controla la tarjeta principal*/
+{
+      flex-wrap: wrap; /*permite que los elementos del contenedor pueden acomodarse*/
+      padding-top: 90px; /*define el espaciado*/
+      
+      
+}
+
+.tarjeta1 /*clase que controla la tarjeta principal*/
+{
+      flex: 1 1 33%; /*permite abreviar otras propiedades de flex-grow,flex-shrink y flex-basis*/
+      background-color: #6480a1;/*define el color de fondo*/
+      padding-top: 20px; /*define el espaciado*/
+      font-size: 10px;  /* se establece el tamaño de fuente */
+      font-family: Arial; /* se establece el tipo de fuente */  
+      text-align: center;       
+}
+.tarjeta1 h3/*establece el estilo en un encabezado tipo 3*/
+{
+  font-size: 24px;  /* se establece el tamaño de fuente */
+  font-family: Arial; /* se establece el tipo de fuente */
+  text-align: center;/*se establece la alineacion a la izquierda*/
+  padding-left: 65px;/*se establece el espaciado a la izquierda*/
+  margin: 25px ;/*se establece el margen entre lineas de texto*/
+  
+  
+}
+
+img /* se establece el formato de la imagen */
+{ 
+  width: 363px; /* se establece el ancho de la imagen */  
+  height: 483px;/*se establece la altura de la imagen*/
+  border-radius: 12px;/* se señala el borde de la imagen */
+  display: block; /* se establece el bloque de la imagen */
+  margin: auto ;  /* se establece el margen de la imagen */
+}
+
+ form 
+ {
+      margin: 0 auto;
+      justify-content: bottom; /*Formulario*/
+      background: #718dc1;/* se coloca el color de fondo en formato hexadecimal */
+      margin-top: 90px;/*margen superior*/
+      padding: 30px;/* se señala el espacio entre el contenido y los bordes del elemento */ 
+      border-radius: 10px;/* se señala el borde del contenedor */ 
+      width: 350px;/*establece el ancho de un elemento específico*/
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2); /*especifica el sombreado del box */
+ }
+
+  button /* se configura los atributos del boton */
+ {
+      background-color: #275eb1;/* se establece el color de fondo */  
+      color: white;/* se establece el color de texto*/
+      padding: 10px;/* se establece el espaciado */
+      width: 100%;/*especifica el ancho*/
+      border: none;/*especifica sin borde*/
+      border-radius: 6px;/* se establece el contorno del borde */
+      margin-top: 15px;/*margen superior*/
+      cursor: pointer;/*se agrega cambio de puntero al pasar por el boton*/
+}
+
+button:hover/*cambio de color del boton al pasaar el mouse*/
+{
+    background: #329dfb7e;/*cambio de color del boton al pasar el mouse*/
+}
+
+ input, select /*se da estilo a los elementos del form*/
+ {
+      width: 100%;/*especifica el ancho*/
+      padding: 10px;/* se señala el espacio entre el contenido y los bordes del elemento */ 
+      margin-top: 10px;/*margen superior*/
+      border: 1px solid #ccc;/*borde los elementos*/
+      border-radius: 6px;/* se establece el contorno del borde */
+ }
+.celda1 /* este es el nombre del objeto al cual se llamara en el codigo html */
+{
+  display: flex; /* aqui se invoca el tipo de elemento que permitira mostrar los contenedores */
+  flex-direction: column;
+  row-gap: 20px;
+  justify-content: space-evenly;  /* aqui se señala el espacio que habra entre contenedores */
+  align-items: center;     /* aqui se menciona el tipo de alineamiento que tendra el contenido */
+  padding: 35px;        /* se señala el espacio entre el contenido y los bordes del elemento */   
+  background-color: transparent; /* se coloca el color de fondo en formato hexadecimal */
+}
+
+.celda2 
+{
+  
+  background: #b8d9ff; /* se coloca el color de fondo en formato hexadecimal */
+  padding: 15px 25px;  /* se señala el espacio entre el contenido y los bordes del elemento */ 
+  border-radius: 12px;  /* se señala el borde del contenedor */ 
+  font-family: Arial; /* se establece el tipo de fuente */
+  text-align: center; /* se establece el alineado del texto */
+  font-size: 16px; /* se establece el tamaño de fuente */
+}

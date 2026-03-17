@@ -1,0 +1,67 @@
+<?php
+session_start();//  permite iniciar sesion 
+//esta estructura condicional permite validar el idusuario y el tipo de usuario
+if (!isset($_SESSION["IDUsuario"]) || $_SESSION["TipoUsuario"] !== "ce") 
+{
+    header("Location: iniciarsesion.html");//si la condicion es correcta redirecciona a la pagian del menuce
+    exit;
+}
+//variables de sesion que se mostrara en la pagina dando la bienvenida 
+$nombreCompleto = $_SESSION["nombre"] . " " .
+                  $_SESSION["ApellidoPaterno"] . " " .
+                  $_SESSION["ApellidoMaterno"];
+
+$tipo = $_SESSION["TipoUsuario"];//variable de sesion que mostrara en la pagina el tipo de usuario
+
+?>
+
+<!DOCTYPE html><!--inicia codigo html -->
+<html lang="es-MX"><!--se invoca el idioma de la region-->
+<head><!--inicia la cabecera-->
+<meta charset="UTF-8"><!--se establece el formato para mostrar caracteres como ñ o acentos-->
+<meta name ="viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<title>Menu Control Escolar</title><!--se establece el titulo de la pagina-->
+<link rel = "stylesheet" href = "css/bootstrap.min.css"><!-- referencia de la hoja de estilo-->
+</head><!--termina cabecera-->
+<body style="background-color: #d1e0fc; "><!--inicia cuerpo de la pagina-->
+ <!--se implementa la barra de navegacion y los stributos como color o que este fijo al hacer scroll-->
+<nav class ="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #e3f2fd;">
+<div class ="container-fluid">
+<a class ="navbar-brand" href="#">Bienvenido</a><!--esta clase permite establecer un logo o nombre de marca-->
+<!--se establece los botones de la barra de navegacion asi como sus atributos-->
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!--se estable las propiedades del menu de hamburguesa-->
+<div class="collapse navbar-collapse" id="navbarNav">   
+<ul class="navbar-nav">
+<!--aqui se establece el nombre de las opciones de la barra a modo de referencia-->
+<li class ="nav-item"><a class="nav-link active" aria-current="page" href="menuCE.php">Bienvenida</a></li>
+<li class ="nav-item"><a class="nav-link active" aria-current="page" href="consultarCE.php">Consultar</a></li>
+<li class ="nav-item"><a class="nav-link active" aria-current="page" href="inscribirCE.html">Inscribir</a></li>
+<li class ="nav-item"><a class="nav-link active" aria-current="page" href="modificarasignaturamenuCE.php">Modificar</a></li>
+<li class ="nav-item"><a class="nav-link active" aria-current="page" href="eliminarasignaturamenuCE.php">Eliminar</a></li>
+<li class ="nav-item"><a class="nav-link active" aria-current="page" href="cerrarsesion.php">Salir</a></li>
+</ul> </div> </div></nav><!--termina contenedores de la barra de navegacion-->
+<!--se invoca el archivo js de bootstrap-->
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
+
+
+<div class="container my-5" >
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <div class="card shadow p-4" style="background-color: #a8bae6;">
+        <h3 class="text-center mb-4">¡Bienvenido <?= $nombreCompleto ?>!</h3>
+        <h2 class="text-center mb-4">¡Has ingresado como <strong><?= $tipo ?></strong>!</h2>
+        </div>
+     </div>
+  </div>
+
+</body><!--termina el cuerpo-->
+</html><!--fin de html-->
